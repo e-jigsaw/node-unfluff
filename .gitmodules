@@ -1,0 +1,3 @@
+[submodule "igo-javascript"]
+	path = igo-javascript
+	url = https://github.com/e-jigsaw/igo-javascript.git
