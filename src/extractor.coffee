@@ -186,7 +186,7 @@ extractTags = (doc) ->
 # Walk the document's text nodes and find the most 'texty' node in the doc
 calculateBestNode = (doc, lang) ->
   topNode = null
-  nodesToCheck = doc("p, pre, td")
+  nodesToCheck = doc("p, pre, td, div")
 
   startingBoost = 1.0
   cnt = 0
@@ -264,6 +264,7 @@ calculateBestNode = (doc, lang) ->
   # That's probably out best node!
   _.each parentNodes, (e) ->
     score = getScore(doc(e))
+    console.log score, doc(e).text()
 
     if score > topNodeScore
       topNode = e
